@@ -1,7 +1,7 @@
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-public class One extends Thread {
+ class One extends Thread {
 
     PrintNumbers p;
     int i = 1;
@@ -22,7 +22,7 @@ public class One extends Thread {
 
     }
 }
-public class Two extends Thread {
+ class Two extends Thread {
 
     int i = 1;
 
@@ -33,7 +33,7 @@ public class Two extends Thread {
 
     }
 
-    @Override
+   
     public void run() {
 
         int prev = 2;
@@ -44,7 +44,7 @@ public class Two extends Thread {
         }
 }
 }
-public class Three extends Thread {
+ class Three extends Thread {
 
     PrintNumbers p;
     int i = 1;
@@ -64,12 +64,12 @@ public class Three extends Thread {
 }
 }
 }
-public class PrintNumbers {
+ class PrintNumbers {
 
     public enum status {
         A, B, C
     }
-
+    status Y=status.B;
     status X = status.A;
     //
     public synchronized void printOne(int number) {
@@ -108,7 +108,7 @@ notifyAll();
 
     }
 
-    public synchronized void printThree(int number) {
+    synchronized void printThree(int number) {
         //
          if (!X.equals(status.C) && !Y.equals(status.A)) {
 
@@ -127,7 +127,7 @@ notifyAll();
     }
    
 }
-public class a8q7 {
+ class a8q7 {
 
     public static void main(String[] args) {
 

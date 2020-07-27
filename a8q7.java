@@ -108,7 +108,7 @@ notifyAll();
 
     }
 
-    synchronized void printThree(int number) {
+    public synchronized void printThree(int number) {
         //
          if (!X.equals(status.C) && !Y.equals(status.A)) {
 
